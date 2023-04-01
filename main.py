@@ -2,13 +2,14 @@ from bs4 import BeautifulSoup
 import requests
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import os
 
 
-MY_SPOTIFY_USER_ID = "s2h7oarj5vlfmf901moawc8cd"
+MY_SPOTIFY_USER_ID = os.environ.get("MY_SPOTIFY_USER_ID")
 
 # Setting up Spotify API credentials
-CLIENT_ID = "6675242814784e4c9b88a8ba9c4c89b5"
-CLIENT_SECRET = "d147063d0aac4a318c151a6fe1b7f25d"
+CLIENT_ID = os.environ.get("CLIENT_ID")
+CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
 REDIRECT_URI = "http://example.com"
 SCOPE = "playlist-modify-private"
 
